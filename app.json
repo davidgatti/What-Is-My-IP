@@ -1,0 +1,7 @@
+{
+  "name": "What is my ip",
+  "description": "A simple server, client, client to help you track what is your IP",
+  "repository": "https://github.com/davidgatti/What-Is-My-IP",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "socket", "myip"]
+}
