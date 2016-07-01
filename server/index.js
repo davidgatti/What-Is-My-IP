@@ -1,8 +1,7 @@
 'use strict';
 
-let net = require('net');
-
-const PORT = 80;
+const net = require('net');
+const port = process.env.PORT || 5000;
 
 let server = net.createServer(function(socket) {
 
@@ -26,7 +25,7 @@ let server = net.createServer(function(socket) {
 });
 
 // Start listening on a specific port and address
-server.listen(PORT, function() {
+server.listen(port, function() {
 
 	console.log("I'm alive");
 
