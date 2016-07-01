@@ -1,0 +1,24 @@
+{
+  "name": "What-is-my-IP",
+  "version": "0.1.0",
+  "description": "A simple server, client, client to help you track what is your IP",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": "4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidgatti/What-Is-My-IP"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "socket",
+    "myip"
+  ],
+  "author": "David Gatti",
+  "license": "MIT"
+}
