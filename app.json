@@ -2,7 +2,7 @@
   "name": "What is my IP",
   "description": "A simple server, client, client to help you track what is your IP",
   "repository": "https://github.com/davidgatti/What-Is-My-IP",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "logo": "https://github.com/davidgatti/What-Is-My-IP/blob/master/logo.png",
   "keywords": ["node", "socket", "myip"],
   "success_url": "/welcome"
 }
