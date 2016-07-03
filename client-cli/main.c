@@ -17,8 +17,22 @@
 #include <time.h>
 #include <signal.h>
 
-int main()
+int main(int argc, char **argv)
 {
+    //
+    //  Check for arguments
+    //
+    if( argc == 2 ) {
+        printf("The argument supplied is %s\n", argv[1]);
+    }
+    else if( argc > 2 ) {
+        printf("Too many arguments supplied.\n");
+    }
+    else {
+        printf("One argument expected.\n");
+    }
+
+    char host[] = "secure-earth-47559.herokuapp.com";
     int sockfd;
     int portno;
     struct sockaddr_in serv_addr;
@@ -46,7 +60,7 @@ int main()
     //
     //  Provided by netdb.h
     //
-    server = gethostbyname("localhost");
+    server = gethostbyname(host);
 
     //
     //  -> Show error if any
