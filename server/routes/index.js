@@ -30,7 +30,7 @@ router.post('/', function(req, res, next) {
     if (req.headers['x-forwarded-for'])
     {
         var ipList = req.headers['x-forwarded-for'].split(",");
-        ip = ipList[list.length-1];
+        ip = ipList[ipList.length - 1];
     }
     else if (req.connection && req.connection.remoteAddress)
     {
