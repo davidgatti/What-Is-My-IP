@@ -25,19 +25,21 @@ router.get('/', function(req, res, next) {
 //
 router.post('/', function(req, res, next) {
 
-	let ips = req.headers["x-forwarded-for"];
-	let ip = '';
+    var ip = '';
 
-	if (ips)
-	{
-		let list = ips.split(",");
-
-		ip = list[list.length-1];
-	}
-	else
-	{
-		ip = req.connection.remoteAddress;
-	}
+    if (req.headers['x-forwarded-for'])
+    {
+        var ipList = req.headers['x-forwarded-for'].split(",");
+        ip = ipList[list.length-1];
+    }
+    else if (req.connection && req.connection.remoteAddress)
+    {
+        ip = req.connection.remoteAddress;
+    }
+    else
+    {
+        ip = req.ip;
+    }
 
 	//
 	//	1. Save the remote IP
