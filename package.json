@@ -4,11 +4,18 @@
   "description": "A simple server, client, client to help you track what is your IP",
   "main": "server/index.js",
   "scripts": {
-    "install" : "npm install",
     "start": "node server/bin/www"
   },
   "engines": {
     "node": "4.4.3"
+  },
+  "dependencies": {
+    "body-parser": "1.13.2",
+    "debug": "2.2.0",
+    "express": "4.13.1",
+    "hjs": "0.0.6",
+    "morgan": "1.6.1",
+    "uuid": "2.0.2"
   },
   "repository": {
     "type": "git",
