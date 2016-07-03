@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // view engine setup
+app.set('views', __dirname + '/views/');
 app.set('view engine', 'hjs');
 
 //
