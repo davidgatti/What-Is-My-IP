@@ -4,7 +4,7 @@
   "description": "A simple server, client, client to help you track what is your IP",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/bin/www"
   },
   "engines": {
     "node": "4.4.3"

@@ -1,0 +1,21 @@
+<h1>Welcome</h1>
+
+<p>Thank you for installing this software. I hope it will serve you well :)</p>
+
+<h1>Final Setup</h1>
+
+<p>Before you can start using this software you have to setup a API KEY. </p>
+<p>For your convince you can copy and past the following random generated API KEY</p>
+
+<code>{{uuid}}</code>
+
+<p>Copy this sequence and go to the Settign page of this Heroku app. There you'll find the "Reveal Config Vars" button. Click on it, and change the actual API_KEY value to this random sequence.</p>
+
+<p>The same API_KEY needs to be pasted in the MacOS Today Widget, and in the Linux client that will ping the server to update the IP.</p>
+
+<p>This solution is in place so only you can updated your IP, and read it.</p>
+
+<p>Find out more here <a href="https://github.com/davidgatti/What-Is-My-IP">https://github.com/davidgatti/What-Is-My-IP</a></p>
+
+<p>Best regards,</p>
+<p>David.</p>
