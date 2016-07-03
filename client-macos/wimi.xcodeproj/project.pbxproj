@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E591606A1D29453D005C30DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59160691D29453D005C30DD /* AppDelegate.swift */; };
+		E591606C1D29453D005C30DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591606B1D29453D005C30DD /* ViewController.swift */; };
+		E591606E1D29453D005C30DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E591606D1D29453D005C30DD /* Assets.xcassets */; };
+		E59160711D29453D005C30DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591606F1D29453D005C30DD /* Main.storyboard */; };
+		E5CD71811D29462F00F60835 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CD71801D29462F00F60835 /* NotificationCenter.framework */; };
+		E5CD71861D29462F00F60835 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD71851D29462F00F60835 /* TodayViewController.swift */; };
+		E5CD71891D29462F00F60835 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CD71871D29462F00F60835 /* TodayViewController.xib */; };
+		E5CD718D1D29462F00F60835 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5CD718B1D29462F00F60835 /* InfoPlist.strings */; };
+		E5CD71901D29462F00F60835 /* wimi-today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E5CD717E1D29462F00F60835 /* wimi-today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5CD718E1D29462F00F60835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E591605E1D29453C005C30DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5CD717D1D29462F00F60835;
+			remoteInfo = "wimi-today";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5CD71941D29462F00F60835 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E5CD71901D29462F00F60835 /* wimi-today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E59160661D29453C005C30DD /* wimi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wimi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59160691D29453D005C30DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E591606B1D29453D005C30DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E591606D1D29453D005C30DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E59160701D29453D005C30DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E59160721D29453D005C30DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CD717E1D29462F00F60835 /* wimi-today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "wimi-today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5CD71801D29462F00F60835 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E5CD71841D29462F00F60835 /* wimi_today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = wimi_today.entitlements; sourceTree = "<group>"; };
+		E5CD71851D29462F00F60835 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E5CD71881D29462F00F60835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
+		E5CD718A1D29462F00F60835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CD718C1D29462F00F60835 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E59160631D29453C005C30DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5CD717B1D29462F00F60835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5CD71811D29462F00F60835 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E591605D1D29453C005C30DD = {
+			isa = PBXGroup;
+			children = (
+				E59160681D29453D005C30DD /* wimi */,
+				E5CD71821D29462F00F60835 /* wimi-today */,
+				E5CD717F1D29462F00F60835 /* Frameworks */,
+				E59160671D29453C005C30DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E59160671D29453C005C30DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E59160661D29453C005C30DD /* wimi.app */,
+				E5CD717E1D29462F00F60835 /* wimi-today.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E59160681D29453D005C30DD /* wimi */ = {
+			isa = PBXGroup;
+			children = (
+				E59160691D29453D005C30DD /* AppDelegate.swift */,
+				E591606B1D29453D005C30DD /* ViewController.swift */,
+				E591606D1D29453D005C30DD /* Assets.xcassets */,
+				E591606F1D29453D005C30DD /* Main.storyboard */,
+				E59160721D29453D005C30DD /* Info.plist */,
+			);
+			path = wimi;
+			sourceTree = "<group>";
+		};
+		E5CD717F1D29462F00F60835 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5CD71801D29462F00F60835 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5CD71821D29462F00F60835 /* wimi-today */ = {
+			isa = PBXGroup;
+			children = (
+				E5CD71851D29462F00F60835 /* TodayViewController.swift */,
+				E5CD71871D29462F00F60835 /* TodayViewController.xib */,
+				E5CD71831D29462F00F60835 /* Supporting Files */,
+			);
+			path = "wimi-today";
+			sourceTree = "<group>";
+		};
+		E5CD71831D29462F00F60835 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5CD718A1D29462F00F60835 /* Info.plist */,
+				E5CD718B1D29462F00F60835 /* InfoPlist.strings */,
+				E5CD71841D29462F00F60835 /* wimi_today.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E59160651D29453C005C30DD /* wimi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59160751D29453D005C30DD /* Build configuration list for PBXNativeTarget "wimi" */;
+			buildPhases = (
+				E59160621D29453C005C30DD /* Sources */,
+				E59160631D29453C005C30DD /* Frameworks */,
+				E59160641D29453C005C30DD /* Resources */,
+				E5CD71941D29462F00F60835 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5CD718F1D29462F00F60835 /* PBXTargetDependency */,
+			);
+			name = wimi;
+			productName = wimi;
+			productReference = E59160661D29453C005C30DD /* wimi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5CD717D1D29462F00F60835 /* wimi-today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5CD71931D29462F00F60835 /* Build configuration list for PBXNativeTarget "wimi-today" */;
+			buildPhases = (
+				E5CD717A1D29462F00F60835 /* Sources */,
+				E5CD717B1D29462F00F60835 /* Frameworks */,
+				E5CD717C1D29462F00F60835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "wimi-today";
+			productName = "wimi-today";
+			productReference = E5CD717E1D29462F00F60835 /* wimi-today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E591605E1D29453C005C30DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "David Gatti";
+				TargetAttributes = {
+					E59160651D29453C005C30DD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					E5CD717D1D29462F00F60835 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E59160611D29453C005C30DD /* Build configuration list for PBXProject "wimi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E591605D1D29453C005C30DD;
+			productRefGroup = E59160671D29453C005C30DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E59160651D29453C005C30DD /* wimi */,
+				E5CD717D1D29462F00F60835 /* wimi-today */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E59160641D29453C005C30DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E591606E1D29453D005C30DD /* Assets.xcassets in Resources */,
+				E59160711D29453D005C30DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5CD717C1D29462F00F60835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5CD71891D29462F00F60835 /* TodayViewController.xib in Resources */,
+				E5CD718D1D29462F00F60835 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E59160621D29453C005C30DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E591606C1D29453D005C30DD /* ViewController.swift in Sources */,
+				E591606A1D29453D005C30DD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5CD717A1D29462F00F60835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5CD71861D29462F00F60835 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5CD718F1D29462F00F60835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5CD717D1D29462F00F60835 /* wimi-today */;
+			targetProxy = E5CD718E1D29462F00F60835 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E591606F1D29453D005C30DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E59160701D29453D005C30DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5CD71871D29462F00F60835 /* TodayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5CD71881D29462F00F60835 /* Base */,
+			);
+			name = TodayViewController.xib;
+			sourceTree = "<group>";
+		};
+		E5CD718B1D29462F00F60835 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5CD718C1D29462F00F60835 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E59160731D29453D005C30DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E59160741D29453D005C30DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E59160761D29453D005C30DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = wimi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.gatti.wimi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E59160771D29453D005C30DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = wimi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.gatti.wimi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E5CD71911D29462F00F60835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "wimi-today/wimi_today.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "wimi-today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.gatti.wimi.wimi-today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E5CD71921D29462F00F60835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "wimi-today/wimi_today.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "wimi-today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.gatti.wimi.wimi-today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E59160611D29453C005C30DD /* Build configuration list for PBXProject "wimi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59160731D29453D005C30DD /* Debug */,
+				E59160741D29453D005C30DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E59160751D29453D005C30DD /* Build configuration list for PBXNativeTarget "wimi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59160761D29453D005C30DD /* Debug */,
+				E59160771D29453D005C30DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5CD71931D29462F00F60835 /* Build configuration list for PBXNativeTarget "wimi-today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5CD71911D29462F00F60835 /* Debug */,
+				E5CD71921D29462F00F60835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E591605E1D29453C005C30DD /* Project object */;
+}
