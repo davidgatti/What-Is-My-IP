@@ -25,14 +25,25 @@ router.get('/', function(req, res, next) {
 //
 router.post('/', function(req, res, next) {
 
-    var ip = '';
+	//
+	//	1. Create an empty variable where we are going to store
+	//	   the remote IP.
+	//
+    let ip = '';
 
-    if (req.headers['x-forwarded-for'])
+    //
+    //	2. Get the remote IP, and to make sure we get the actual user IP.
+    //
+    //	   We have to over all this hoops. Otherwise we are going to get
+    //	   the load balancer IP and any other service that sits between
+    //	   the user and our app.
+    //
+    if(req.headers['x-forwarded-for'])
     {
         var ipList = req.headers['x-forwarded-for'].split(",");
         ip = ipList[ipList.length - 1];
     }
-    else if (req.connection && req.connection.remoteAddress)
+    else if(req.connection && req.connection.remoteAddress)
     {
         ip = req.connection.remoteAddress;
     }
@@ -41,10 +52,15 @@ router.post('/', function(req, res, next) {
         ip = req.ip;
     }
 
+    //
+    //	3. Save the time stamp so we can tell how fresh is the IP
+    //
+    let timeStamp = Math.floor(Date.now() / 1000);
+
 	//
-	//	1. Save the remote IP
+	//	4. Combine everything in to a string.
 	//
-	db = ip + "\n" + Math.floor(Date.now() / 1000)
+	db = ip + "\n" + timeStamp
 
 	//
 	//	-> thank you for the ping :)
