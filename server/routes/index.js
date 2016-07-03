@@ -6,10 +6,7 @@ const router = express.Router();
 //
 //	RAM DB
 //
-let db = {
-	ip: "",
-	timeStamp: 0
-}
+let db = "";
 
 //
 //	Get
@@ -19,7 +16,7 @@ router.get('/', function(req, res, next) {
 	//
 	//	-> Respond with the data
 	//
-	return res.status(200).json(db);
+	return res.status(200).send(db);
 
 });
 
@@ -31,12 +28,7 @@ router.post('/', function(req, res, next) {
 	//
 	//	1. Save the remote IP
 	//
-	db.ip = req.connection.remoteAddress;
-
-	//
-	//	2. Save the time when the entry was created
-	//
-	db.timeStamp = Math.floor(Date.now() / 1000);
+	db = req.connection.remoteAddress + "\n" + Math.floor(Date.now() / 1000)
 
 	//
 	//	-> thank you for the ping :)
