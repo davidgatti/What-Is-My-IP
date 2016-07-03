@@ -28,7 +28,7 @@ router.post('/', function(req, res, next) {
 	//
 	//	1. Save the remote IP
 	//
-	db = req.ip + "\n" + Math.floor(Date.now() / 1000)
+	db = req.header['x-forwarded-for'] + "\n" + Math.floor(Date.now() / 1000)
 
 	//
 	//	-> thank you for the ping :)
