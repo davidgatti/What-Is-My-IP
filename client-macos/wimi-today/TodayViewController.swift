@@ -11,6 +11,9 @@ import NotificationCenter
 
 class TodayViewController: NSViewController, NCWidgetProviding {
 
+    @IBOutlet weak var tfIP: NSTextField!
+    @IBOutlet weak var tfTime: NSTextField!
+    
     override var nibName: String? {
         return "TodayViewController"
     }
@@ -51,7 +54,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         let session = NSURLSession.sharedSession()
 
         //
-        //  4. Combine evrything toghether
+        //  4. Handle the HTTP Response
         //
         let task = session.dataTaskWithRequest(request){(data, response, error) in
 
@@ -63,13 +66,46 @@ class TodayViewController: NSViewController, NCWidgetProviding {
             //
             //  2. Split the string by the new line char
             //
-            let box = strResponse?.componentsSeparatedByString("\n")
+            let arrResponse = strResponse?.componentsSeparatedByString("\n")
+
+            //
+            //  3. Convert the Unix timestamp string in to a Doubble
+            //
+            let unixtime = Double(arrResponse![1]);
+
+            //
+            //  4. Create a date based on the Unix timestamp
+            //
+            let date = NSDate(timeIntervalSince1970: unixtime!)
+
+            //
+            //  5. Format the date in to a human readable format 
+            //     while usign the user locale.
+            //
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = NSDateFormatterStyle.LongStyle
+            formatter.timeStyle = .MediumStyle
+
+            //
+            //  6. Create the final date time string
+            //
+            let dateString = formatter.stringFromDate(date)
 
             //
             //  -> Print out
             //
-            print("IP: ", box![0])
-            print("Time: ", box![1])
+            print("IP: ", arrResponse![0])
+            print("Time: ", dateString)
+
+            //
+            //  -> UI display
+            //
+            dispatch_async(dispatch_get_main_queue(), {
+
+                self.tfIP.stringValue = arrResponse![0];
+                self.tfTime.stringValue = dateString;
+
+            })
         }
 
         //
