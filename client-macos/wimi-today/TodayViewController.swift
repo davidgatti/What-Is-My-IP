@@ -11,10 +11,11 @@ import NotificationCenter
 
 class TodayViewController: NSViewController, NCWidgetProviding {
 
+    @IBOutlet weak var viewHeight: NSLayoutConstraint!
     @IBOutlet weak var tfIP: NSTextField!
     @IBOutlet weak var tfTime: NSTextField!
     let defaults = NSUserDefaults.standardUserDefaults()
-    
+
     override var nibName: String? {
         return "TodayViewController"
     }
@@ -30,23 +31,36 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         super.viewDidLoad()
 
         //
-        //  Temporary Key to be removed
+        //  Loading the API_KEY from the user defaults
         //
         let apikeyD = defaults.objectForKey("apikey") as! String;
+
+        //
+        //  Converting the Strign to UTF8
+        //
         let utf8str = apikeyD.dataUsingEncoding(NSUTF8StringEncoding);
 
+        //
+        // Gettign ready to accept the content of the conversion
+        //
         var API_KEY = "";
 
+        //
+        //  Convert the raw API_KEY in to Base64
+        //
         if let base64 = utf8str?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         {
             API_KEY = "Basic " + String(data: base64, encoding: NSUTF8StringEncoding)!
         }
-        //c50c4730387ed2eb512fbc94579f5e535c6721c22902904334e40582d2a53a11
 
         //
-        //  Temporary URL
+        //  Loading the URL from the user defaults
         //
         let urlD = defaults.objectForKey("url") as! String;
+
+        //
+        //  Creatign URL from User Defaults
+        //
         let url = NSURL(string: urlD)
 
         //
@@ -123,6 +137,10 @@ class TodayViewController: NSViewController, NCWidgetProviding {
                     })
 
                 }
+                else
+                {
+                    self.viewHeight.constant = 216;
+                }
             }
         }
 
@@ -130,6 +148,5 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         // 5. Make the HTTP request.
         //
         task.resume()
-
     }
 }
