@@ -451,6 +451,7 @@
 				E5CD71921D29462F00F60835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

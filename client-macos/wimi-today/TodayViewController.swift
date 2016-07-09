@@ -13,6 +13,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 
     @IBOutlet weak var tfIP: NSTextField!
     @IBOutlet weak var tfTime: NSTextField!
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override var nibName: String? {
         return "TodayViewController"
@@ -31,12 +32,22 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         //
         //  Temporary Key to be removed
         //
-        let API_KEY = "Basic MzQzMzdlMmItYzgzOC00MWE5LThhMzQtZWU0Y2JhNTRmOGU1Og==";
+        let apikeyD = defaults.objectForKey("apikey") as! String;
+        let utf8str = apikeyD.dataUsingEncoding(NSUTF8StringEncoding);
+
+        var API_KEY = "";
+
+        if let base64 = utf8str?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        {
+            API_KEY = "Basic " + String(data: base64, encoding: NSUTF8StringEncoding)!
+        }
+        //c50c4730387ed2eb512fbc94579f5e535c6721c22902904334e40582d2a53a11
 
         //
         //  Temporary URL
         //
-        let url = NSURL(string: "https://stark-scrubland-44326.herokuapp.com")
+        let urlD = defaults.objectForKey("url") as! String;
+        let url = NSURL(string: urlD)
 
         //
         //  1. Create the request
@@ -58,54 +69,61 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         //
         let task = session.dataTaskWithRequest(request){(data, response, error) in
 
-            //
-            //  1. Convert the buffer in to a string
-            //
-            let strResponse = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            if let httpResponse = response as? NSHTTPURLResponse
+            {
+                if(httpResponse.statusCode <= 200)
+                {
+                    //
+                    //  1. Convert the buffer in to a string
+                    //
+                    let strResponse = NSString(data: data!, encoding: NSUTF8StringEncoding)
 
-            //
-            //  2. Split the string by the new line char
-            //
-            let arrResponse = strResponse?.componentsSeparatedByString("\n")
+                    //
+                    //  2. Split the string by the new line char
+                    //
+                    let arrResponse = strResponse?.componentsSeparatedByString("\n")
 
-            //
-            //  3. Convert the Unix timestamp string in to a Doubble
-            //
-            let unixtime = Double(arrResponse![1]);
+                    //
+                    //  3. Convert the Unix timestamp string in to a Doubble
+                    //
+                    let unixtime = Double(arrResponse![1]);
 
-            //
-            //  4. Create a date based on the Unix timestamp
-            //
-            let date = NSDate(timeIntervalSince1970: unixtime!)
+                    //
+                    //  4. Create a date based on the Unix timestamp
+                    //
+                    let date = NSDate(timeIntervalSince1970: unixtime!)
 
-            //
-            //  5. Format the date in to a human readable format 
-            //     while usign the user locale.
-            //
-            let formatter = NSDateFormatter()
-            formatter.dateStyle = NSDateFormatterStyle.LongStyle
-            formatter.timeStyle = .MediumStyle
+                    //
+                    //  5. Format the date in to a human readable format 
+                    //     while usign the user locale.
+                    //
+                    let formatter = NSDateFormatter()
+                    formatter.dateStyle = NSDateFormatterStyle.LongStyle
+                    formatter.timeStyle = .MediumStyle
 
-            //
-            //  6. Create the final date time string
-            //
-            let dateString = formatter.stringFromDate(date)
+                    //
+                    //  6. Create the final date time string
+                    //
+                    let dateString = formatter.stringFromDate(date)
 
-            //
-            //  -> Print out
-            //
-            print("IP: ", arrResponse![0])
-            print("Time: ", dateString)
+                    //
+                    //  -> Print out
+                    //
+                    print("IP: ", arrResponse![0])
+                    print("Time: ", dateString)
 
-            //
-            //  -> UI display
-            //
-            dispatch_async(dispatch_get_main_queue(), {
+                    //
+                    //  -> UI display
+                    //
+                    dispatch_async(dispatch_get_main_queue(), {
 
-                self.tfIP.stringValue = arrResponse![0];
-                self.tfTime.stringValue = dateString;
+                        self.tfIP.stringValue = arrResponse![0];
+                        self.tfTime.stringValue = dateString;
 
-            })
+                    })
+
+                }
+            }
         }
 
         //
@@ -114,5 +132,4 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         task.resume()
 
     }
-
 }
