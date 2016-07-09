@@ -4,5 +4,11 @@
   "repository": "https://github.com/davidgatti/What-Is-My-IP",
   "logo": "https://raw.githubusercontent.com/davidgatti/What-Is-My-IP/master/logo.png",
   "keywords": ["node", "socket", "myip"],
-  "success_url": "/welcome"
+  "success_url": "/welcome",
+  "env": {
+    "API_KEY": {
+      "description": "A secret key to prevent someone else to change your IP",
+      "generator": "secret"
+    }
+  }
 }

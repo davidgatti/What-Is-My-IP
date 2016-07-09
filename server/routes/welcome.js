@@ -1,6 +1,5 @@
 'use strict';
 
-const uuid = require('uuid');
 const express = require('express');
 const router = express.Router();
 
@@ -11,7 +10,7 @@ router.get('/', function(req, res, next) {
 	//
 	res.render('welcome',
 		{
-			uuid: uuid.v4()
+			uuid: process.env.API_KEY
 		}
 	);
 
