@@ -52,6 +52,12 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 //        }
 
 		//
+		//	Set default label info
+		//
+		tfIP.stringValue = "No ip yet";
+		tfTime.stringValue = "No time yet";
+
+		//
 		//	Load the data from the server
 		//
         getData();
@@ -195,7 +201,19 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 
                             })
                         }
-                        
+						else
+						{
+							//
+							//  -> UI display
+							//
+							dispatch_async(dispatch_get_main_queue(), {
+
+								self.tfIP.stringValue = "No ip yet";
+								self.tfTime.stringValue = "No time yet";
+
+							})
+						}
+
                     }
                     else
                     {
