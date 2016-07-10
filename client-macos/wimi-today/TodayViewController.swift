@@ -11,9 +11,24 @@ import NotificationCenter
 
 class TodayViewController: NSViewController, NCWidgetProviding {
 
+	//
+	//	The height constraint used to show or hide the settign section
+	//
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
-    @IBOutlet weak var tfIP: NSTextField!
+
+	//
+	// Lable used to display the IP
+	//
+	@IBOutlet weak var tfIP: NSTextField!
+
+	//
+	//	Lable used to display the time the server was pinged by the linux client
+	//
     @IBOutlet weak var tfTime: NSTextField!
+
+	//
+	//	Loading the data from the setting section
+	//
     let defaults = NSUserDefaults.standardUserDefaults()
 
     override var nibName: String? {
@@ -25,128 +40,185 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         // with NoData if nothing has changed or NewData if there is new data since the last
         // time we called you
         completionHandler(.NoData)
+		print("ping")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        if let appDomain = NSBundle.mainBundle().bundleIdentifier
+//        {
+//            defaults.removePersistentDomainForName(appDomain);
+//        }
+
+		//
+		//	Load the data from the server
+		//
+        getData();
+
+		//
+		//	Listen to any chagnes in the user defaults
+		//
+        defaults.addObserver(self, forKeyPath: "apikey", options: NSKeyValueObservingOptions.New, context: nil)
+        defaults.addObserver(self, forKeyPath: "url", options: NSKeyValueObservingOptions.New, context: nil)
+
+    }
+
+	//
+	//	React to chagnes in user defautls
+	//
+    override func observeValueForKeyPath(keyPath: String?,
+								 ofObject object: AnyObject?,
+								          change: [String : AnyObject]?,
+										 context: UnsafeMutablePointer<Void>)
+	{
+		//
+		//	Try to load the data
+		//
+        getData();
+    }
+
+	//
+	//	() that connects to the server
+	//
+    func getData()
+    {
         //
         //  Loading the API_KEY from the user defaults
         //
-        let apikeyD = defaults.objectForKey("apikey") as! String;
-
-        //
-        //  Converting the Strign to UTF8
-        //
-        let utf8str = apikeyD.dataUsingEncoding(NSUTF8StringEncoding);
-
-        //
-        // Gettign ready to accept the content of the conversion
-        //
-        var API_KEY = "";
-
-        //
-        //  Convert the raw API_KEY in to Base64
-        //
-        if let base64 = utf8str?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        if let apikeyD = defaults.objectForKey("apikey"), urlD = defaults.objectForKey("url")
         {
-            API_KEY = "Basic " + String(data: base64, encoding: NSUTF8StringEncoding)!
-        }
+            //
+            //  Converting the Strign to UTF8
+            //
+            let utf8str = apikeyD.dataUsingEncoding(NSUTF8StringEncoding);
 
-        //
-        //  Loading the URL from the user defaults
-        //
-        let urlD = defaults.objectForKey("url") as! String;
+            //
+            // Gettign ready to accept the content of the conversion
+            //
+            var API_KEY = "";
 
-        //
-        //  Creatign URL from User Defaults
-        //
-        let url = NSURL(string: urlD)
-
-        //
-        //  1. Create the request
-        //
-        let request = NSMutableURLRequest(URL: url!)
-
-        //
-        //  2. Set the Authorization header
-        //
-        request.setValue(API_KEY, forHTTPHeaderField: "Authorization");
-
-        //
-        //  3. Create the Connection session
-        //
-        let session = NSURLSession.sharedSession()
-
-        //
-        //  4. Handle the HTTP Response
-        //
-        let task = session.dataTaskWithRequest(request){(data, response, error) in
-
-            if let httpResponse = response as? NSHTTPURLResponse
+            //
+            //  Convert the raw API_KEY in to Base64
+            //
+            if let base64 = utf8str?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
             {
-                if(httpResponse.statusCode <= 200)
+                API_KEY = "Basic " + String(data: base64, encoding: NSUTF8StringEncoding)!
+            }
+
+            //
+            //  Creatign URL from User Defaults
+            //
+            let url = NSURL(string: urlD as! String)
+
+            //
+            //  1. Create the request
+            //
+            let request = NSMutableURLRequest(URL: url!)
+
+            //
+            //  2. Set the Authorization header
+            //
+            request.setValue(API_KEY, forHTTPHeaderField: "Authorization");
+
+            //
+            //  3. Create the Connection session
+            //
+            let session = NSURLSession.sharedSession()
+
+            //
+            //  4. Handle the HTTP Response
+            //
+            let task = session.dataTaskWithRequest(request){(data, response, error) in
+
+                if let httpResponse = response as? NSHTTPURLResponse
                 {
-                    //
-                    //  1. Convert the buffer in to a string
-                    //
-                    let strResponse = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    if(httpResponse.statusCode <= 200)
+                    {
+                        //
+                        //  1. Convert the buffer in to a string
+                        //
+                        let strResponse = NSString(data: data!, encoding: NSUTF8StringEncoding)
 
-                    //
-                    //  2. Split the string by the new line char
-                    //
-                    let arrResponse = strResponse?.componentsSeparatedByString("\n")
+                        //
+                        //  Check if the string is empty or not
+                        //
+                        if(strResponse?.length > 0)
+                        {
+                            //
+                            //  2. Split the string by the new line char
+                            //
+                            let arrResponse = strResponse?.componentsSeparatedByString("\n")
 
-                    //
-                    //  3. Convert the Unix timestamp string in to a Doubble
-                    //
-                    let unixtime = Double(arrResponse![1]);
+                            //
+                            //  3. Convert the Unix timestamp string in to a Doubble
+                            //
+                            let unixtime = Double(arrResponse![1]);
 
-                    //
-                    //  4. Create a date based on the Unix timestamp
-                    //
-                    let date = NSDate(timeIntervalSince1970: unixtime!)
+                            //
+                            //  4. Create a date based on the Unix timestamp
+                            //
+                            let date = NSDate(timeIntervalSince1970: unixtime!)
 
-                    //
-                    //  5. Format the date in to a human readable format 
-                    //     while usign the user locale.
-                    //
-                    let formatter = NSDateFormatter()
-                    formatter.dateStyle = NSDateFormatterStyle.LongStyle
-                    formatter.timeStyle = .MediumStyle
+                            //
+                            //  5. Format the date in to a human readable format
+                            //     while usign the user locale.
+                            //
+                            let formatter = NSDateFormatter()
+                            formatter.dateStyle = NSDateFormatterStyle.LongStyle
+                            formatter.timeStyle = .MediumStyle
 
-                    //
-                    //  6. Create the final date time string
-                    //
-                    let dateString = formatter.stringFromDate(date)
+                            //
+                            //  6. Create the final date time string
+                            //
+                            let dateString = formatter.stringFromDate(date)
 
-                    //
-                    //  -> Print out
-                    //
-                    print("IP: ", arrResponse![0])
-                    print("Time: ", dateString)
+                            //
+                            //  -> Print out
+                            //
+                            print("IP: ", arrResponse![0])
+                            print("Time: ", dateString)
 
-                    //
-                    //  -> UI display
-                    //
-                    dispatch_async(dispatch_get_main_queue(), {
+                            //
+                            //  -> UI display
+                            //
+                            dispatch_async(dispatch_get_main_queue(), {
 
-                        self.tfIP.stringValue = arrResponse![0];
-                        self.tfTime.stringValue = dateString;
+                                self.tfIP.stringValue = arrResponse![0];
+                                self.tfTime.stringValue = dateString;
 
-                    })
+								//
+								//	This will amke sure taht the settgins will be hiiden
+								//	once the settigns are set.
+								//
+								self.viewHeight.constant = 119;
 
-                }
-                else
-                {
-                    self.viewHeight.constant = 216;
+                            })
+                        }
+                        
+                    }
+                    else
+                    {
+						//
+						//	If no user defaults, show the settigns section
+						//
+                        self.viewHeight.constant = 216;
+                    }
                 }
             }
+            
+            //
+            // 5. Make the HTTP request.
+            //
+            task.resume()
         }
-
-        //
-        // 5. Make the HTTP request.
-        //
-        task.resume()
+        else
+        {
+			//
+			//	If unable to connect to the server show the settign section
+			//
+            self.viewHeight.constant = 216;
+        }
     }
+
 }
