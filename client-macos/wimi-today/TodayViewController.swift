@@ -191,7 +191,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 								//	This will amke sure taht the settgins will be hiiden
 								//	once the settigns are set.
 								//
-								self.viewHeight.constant = 119;
+								self.viewHeight.constant = 90;
 
                             })
                         }
@@ -202,7 +202,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 						//
 						//	If no user defaults, show the settigns section
 						//
-                        self.viewHeight.constant = 216;
+                        self.viewHeight.constant = 188;
                     }
                 }
             }
@@ -217,7 +217,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 			//
 			//	If unable to connect to the server show the settign section
 			//
-            self.viewHeight.constant = 216;
+            self.viewHeight.constant = 188;
         }
     }
 
