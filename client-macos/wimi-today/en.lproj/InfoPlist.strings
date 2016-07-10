@@ -1,4 +1,4 @@
 /* Display name and description for this extension. */
-"CFBundleDisplayName" = "wimi-today";
-"com.apple.notificationcenter.widget.description" = "Sample description";
+"CFBundleDisplayName" = "What Is My IP";
+"com.apple.notificationcenter.widget.description" = "A simple server, client, client to help you track what is your IP";
 
