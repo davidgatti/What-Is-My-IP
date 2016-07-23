@@ -24,7 +24,7 @@ After clicking on the button bellow, you’ll be redirected to Heroku where a si
 
 An important part of this step is the final process where at the end you get two buttons. The important one is named “view”. You have to click on it to launch the welcome page and get access to your auto generated API KEY and the URL of the app.
 
-<center><img src="https://github.com/davidgatti/What-Is-My-IP/blob/master/buttons.png"></center>
+<div align="center"><img src="https://github.com/davidgatti/What-Is-My-IP/blob/master/buttons.png"></div>
 
 This two peaces of information are crucial for the following steps.
 
