@@ -43,12 +43,6 @@ int main() {
 	bio = BIO_new_ssl_connect(ctx);
 
 	//
-	//	Retrieves the SSL pointer of BIO, it can then be manipulated
-	//	using the standard SSL library functions
-	//
-	BIO_get_ssl(bio, &ssl);
-
-	//
 	//	uses the string name to set the hostname
 	//
 	BIO_set_conn_hostname(bio, HOST ":" PORT);
