@@ -23,7 +23,9 @@ Now that you have the binary app compiled under the name of `wimi.o`, you can se
 
 1. Get the path to your compiled file by typing `pwd` in the client-cli directory. In my case the file is located under this path `/home/pi/Documents/GitHub/What-Is-My-IP/client-cl`.
 1. Copy the path
-1. Run `crontab -e` to open the cron file with the default text editor in your system, and paste this line `*/15 * * * * /home/pi/Documents/GitHub/What-Is-My-IP/client-cl/wimi.o >/dev/null 2>&1` (of course change your path if different)
+1. Run `crontab -e` to open the cron file with the default text editor in your system, and paste this line `*/15 * * * * /home/pi/Documents/GitHub/What-Is-My-IP/client-cli/wimi.o >/dev/null 2>&1` (of course change your path if different)
 1. Save your changes
 
 This Cron line will run the WiMi app every 15 minutes, and will redirect the result to the `/dev/null` void. If you would like to change the frequency of the Cron job, you can use a on-line generator for make your life easier if you are not fluent with the Cron format. I recommend this site: http://crontab-generator.org.
+
+In addition, to check that evrything works as expected, you should monitor the system logs to see if the Cron job is been executed when it should, by using this command `tail -f /var/log/syslog` in your termianl window.
