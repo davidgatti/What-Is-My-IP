@@ -110,15 +110,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
             //
             // Gettign ready to accept the content of the conversion
             //
-            var API_KEY = "";
-
-            //
-            //  Convert the raw API_KEY in to Base64
-            //
-            if let base64 = utf8str?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
-            {
-                API_KEY = "Basic " + String(data: base64, encoding: NSUTF8StringEncoding)!
-            }
+			let API_KEY = "Basic " + String(data: utf8str!, encoding: NSUTF8StringEncoding)!;
 
             //
             //  Creatign URL from User Defaults
