@@ -107,7 +107,7 @@
                 <constraint firstItem="hpV-m2-vZc" firstAttribute="height" secondItem="bSI-qI-bke" secondAttribute="height" id="rHF-7n-Sni"/>
                 <constraint firstItem="uca-5Y-CPe" firstAttribute="leading" secondItem="KOl-NS-gR0" secondAttribute="leading" id="vRh-h1-bWL"/>
             </constraints>
-            <point key="canvasLocation" x="413" y="288.5"/>
+            <point key="canvasLocation" x="413" y="385"/>
         </customView>
         <userDefaultsController id="Ynu-Qc-hdh"/>
     </objects>
