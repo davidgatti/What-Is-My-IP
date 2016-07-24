@@ -15,7 +15,7 @@
 		E5CD71861D29462F00F60835 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD71851D29462F00F60835 /* TodayViewController.swift */; };
 		E5CD71891D29462F00F60835 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CD71871D29462F00F60835 /* TodayViewController.xib */; };
 		E5CD718D1D29462F00F60835 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5CD718B1D29462F00F60835 /* InfoPlist.strings */; };
-		E5CD71901D29462F00F60835 /* wimi-today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E5CD717E1D29462F00F60835 /* wimi-today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E5CD71901D29462F00F60835 /* WiMi.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E5CD717E1D29462F00F60835 /* WiMi.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E5CD71901D29462F00F60835 /* wimi-today.appex in Embed App Extensions */,
+				E5CD71901D29462F00F60835 /* WiMi.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,13 +43,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E59160661D29453C005C30DD /* wimi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wimi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59160661D29453C005C30DD /* WiMi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiMi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59160691D29453D005C30DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E591606B1D29453D005C30DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E591606D1D29453D005C30DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E59160701D29453D005C30DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E59160721D29453D005C30DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5CD717E1D29462F00F60835 /* wimi-today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "wimi-today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5CD717E1D29462F00F60835 /* WiMi.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WiMi.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CD71801D29462F00F60835 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		E5CD71841D29462F00F60835 /* wimi_today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = wimi_today.entitlements; sourceTree = "<group>"; };
 		E5CD71851D29462F00F60835 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		E59160671D29453C005C30DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E59160661D29453C005C30DD /* wimi.app */,
-				E5CD717E1D29462F00F60835 /* wimi-today.appex */,
+				E59160661D29453C005C30DD /* WiMi.app */,
+				E5CD717E1D29462F00F60835 /* WiMi.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			);
 			name = wimi;
 			productName = wimi;
-			productReference = E59160661D29453C005C30DD /* wimi.app */;
+			productReference = E59160661D29453C005C30DD /* WiMi.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E5CD717D1D29462F00F60835 /* wimi-today */ = {
@@ -172,7 +172,7 @@
 			);
 			name = "wimi-today";
 			productName = "wimi-today";
-			productReference = E5CD717E1D29462F00F60835 /* wimi-today.appex */;
+			productReference = E5CD717E1D29462F00F60835 /* WiMi.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -380,7 +380,7 @@
 				INFOPLIST_FILE = wimi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.gatti.wimi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WiMi;
 			};
 			name = Debug;
 		};
@@ -393,7 +393,7 @@
 				INFOPLIST_FILE = wimi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.gatti.wimi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WiMi;
 			};
 			name = Release;
 		};
@@ -405,7 +405,7 @@
 				INFOPLIST_FILE = "wimi-today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.gatti.wimi.wimi-today";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WiMi;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -418,7 +418,7 @@
 				INFOPLIST_FILE = "wimi-today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.gatti.wimi.wimi-today";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WiMi;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

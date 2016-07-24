@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E5CD717D1D29462F00F60835"
-               BuildableName = "wimi-today.appex"
+               BuildableName = "WiMi.temp_caseinsensitive_rename.appex"
                BlueprintName = "wimi-today"
                ReferencedContainer = "container:wimi.xcodeproj">
             </BuildableReference>
@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E59160651D29453C005C30DD"
-               BuildableName = "wimi.app"
+               BuildableName = "WiMi.temp_caseinsensitive_rename.app"
                BlueprintName = "wimi"
                ReferencedContainer = "container:wimi.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5CD717D1D29462F00F60835"
-            BuildableName = "wimi-today.appex"
+            BuildableName = "WiMi.temp_caseinsensitive_rename.appex"
             BlueprintName = "wimi-today"
             ReferencedContainer = "container:wimi.xcodeproj">
          </BuildableReference>
@@ -72,7 +72,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E59160651D29453C005C30DD"
-            BuildableName = "wimi.app"
+            BuildableName = "WiMi.temp_caseinsensitive_rename.app"
             BlueprintName = "wimi"
             ReferencedContainer = "container:wimi.xcodeproj">
          </BuildableReference>
@@ -92,7 +92,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E59160651D29453C005C30DD"
-            BuildableName = "wimi.app"
+            BuildableName = "WiMi.temp_caseinsensitive_rename.app"
             BlueprintName = "wimi"
             ReferencedContainer = "container:wimi.xcodeproj">
          </BuildableReference>

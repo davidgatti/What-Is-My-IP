@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:wimi.xcodeproj">
+      location = "self:/Users/davidgatti/Documents/GitHub/tgd/What-Is-My-IP/client-macos/wimi.xcodeproj">
    </FileRef>
 </Workspace>
