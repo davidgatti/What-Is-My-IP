@@ -20,6 +20,8 @@
 
 		<!-- Begin page content -->
 		<div class="container col-sm-" style="">
+
+			{{^visited}}
 			<div class="page-header m-t-1">
 				<h1 class="display-4">Welcome</h1>
 			</div>
@@ -42,6 +44,12 @@
 			<p>Best regards,</p>
 
 			<p>David.</p>
+			{{/visited}}
+			{{#visited}}
+			<div class="page-header m-t-1">
+				<h1 class="display-4">No Access</h1>
+			</div>
+			{{/visited}}
 
 		</div>
 

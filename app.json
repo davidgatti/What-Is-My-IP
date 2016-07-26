@@ -1,14 +1,18 @@
 {
-  "name": "What is my IP",
-  "description": "A simple server, client, client to help you track what is your IP",
-  "repository": "https://github.com/davidgatti/What-Is-My-IP",
-  "logo": "https://raw.githubusercontent.com/davidgatti/What-Is-My-IP/master/logo.png",
-  "keywords": ["node", "socket", "myip"],
-  "success_url": "/welcome",
-  "env": {
-    "API_KEY": {
-      "description": "A secret key to prevent someone else to change your IP",
-      "generator": "secret"
-    }
-  }
+	"name": "What is my IP",
+	"description": "A simple server, client, client to help you track what is your IP",
+	"repository": "https://github.com/davidgatti/What-Is-My-IP",
+	"logo": "https://raw.githubusercontent.com/davidgatti/What-Is-My-IP/master/logo.png",
+	"keywords": ["node", "socket", "myip"],
+	"success_url": "/welcome",
+	"env": {
+		"API_KEY": {
+			"description": "A secret key to prevent someone else to change your IP",
+			"generator": "secret"
+		},
+		"VISITED": {
+			"description": "A way to show the welcome page only once.",
+			"value": "0"
+		}
+	}
 }
