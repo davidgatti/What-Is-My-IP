@@ -1,0 +1,22 @@
+<div class="page-header m-t-1">
+	<h1 class="display-4">Welcome</h1>
+</div>
+
+<p class="lead">Thank you for installing WiMi. I hope it will serve you well ☺️.</p>
+
+<hr>
+
+<h1 class="display-4">Final Setup</h1>
+
+<p>For your convince the list bellow points out the two most important peace of information that you need to use the</p>
+
+<ul>
+	<li><strong>Server URL</strong>: <mark>{{url}}</mark></li>
+	<li><strong>API_KEY</strong>: <mark>{{uuid}}</mark></li>
+</ul>
+
+<p>If you didn't read it already, visit the project page <a href="https://github.com/davidgatti/What-Is-My-IP">https://github.com/davidgatti/What-Is-My-IP</a> to find out whee to use this information.</p>
+
+<p>Best regards,</p>
+
+<p>David.</p>
