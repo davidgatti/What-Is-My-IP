@@ -51,6 +51,9 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         completionHandler(.NewData)
     }
 
+	//
+	//	Execute when the view is displayed on the screen
+	//
     override func viewDidLoad() {
         super.viewDidLoad()
 
