@@ -81,10 +81,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 	//
 	//	React to chagnes in user defautls
 	//
-    override func observeValueForKeyPath(keyPath: String?,
-								 ofObject object: AnyObject?,
-								          change: [String : AnyObject]?,
-										 context: UnsafeMutablePointer<Void>)
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)
 	{
 		//
 		//	Try to load the data
