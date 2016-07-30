@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -87,9 +87,9 @@
                                 <rect key="frame" x="18" y="59" width="444" height="153"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="EbL-Rn-DGj">
                                     <font key="font" metaFont="system"/>
-                                    <mutableString key="title">Thank you for installing the Today Widget Client. To see your app, plese swip with two fingers on the trackpad from rigth to left, and click the "edit" button on the bottom of the today window.
+                                    <string key="title">Thank you for installing the Today Widget Client. To see your app, plese swip with two fingers on the trackpad from rigth to left, and click the "edit" button on the bottom of the today window.
 
-After addign the WiMi Widget, paste the API KEY and the server URL followd by a Enter key stroke.  After a moment you should get your IP if you installed the Server and Linux client first.</mutableString>
+After addign the WiMi Widget, paste the API KEY and the server URL followd by a Enter key stroke.  After a moment you should get your IP if you installed the Server and Linux client first.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

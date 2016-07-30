@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="wimi_today" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="WiMi" customModuleProvider="target">
             <connections>
                 <outlet property="tfIP" destination="Psm-VB-Yyt" id="caO-OI-jbm"/>
                 <outlet property="tfTime" destination="KOl-NS-gR0" id="yQR-vF-FBY"/>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Psm-VB-Yyt">
-                    <rect key="frame" x="12" y="35" width="290" height="17"/>
+                    <rect key="frame" x="12" y="35" width="212" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="Ecq-ah-ZPM"/>
                     </constraints>
@@ -83,16 +83,29 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RQs-96-Con">
+                    <rect key="frame" x="236" y="24" width="72" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="trR-jR-FDE"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pRN-jO-1qJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="copy:" target="-2" id="sJa-rm-zTp"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="KU6-MB-4x2" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="AfO-ab-vWV"/>
                 <constraint firstItem="hpV-m2-vZc" firstAttribute="top" secondItem="bSI-qI-bke" secondAttribute="bottom" constant="8" id="COg-IG-h94"/>
                 <constraint firstAttribute="trailing" secondItem="KU6-MB-4x2" secondAttribute="trailing" constant="18" id="Fst-pa-L2p"/>
-                <constraint firstItem="KOl-NS-gR0" firstAttribute="trailing" secondItem="Psm-VB-Yyt" secondAttribute="trailing" id="GL2-OF-nNH"/>
-                <constraint firstAttribute="trailing" secondItem="Psm-VB-Yyt" secondAttribute="trailing" constant="20" id="NkX-Vp-PEC"/>
                 <constraint firstItem="Psm-VB-Yyt" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="14" id="Nqy-Qt-Ts8"/>
                 <constraint firstItem="uca-5Y-CPe" firstAttribute="top" secondItem="KOl-NS-gR0" secondAttribute="bottom" constant="14" id="Pr0-Ti-hgm"/>
                 <constraint firstItem="KOl-NS-gR0" firstAttribute="top" secondItem="Psm-VB-Yyt" secondAttribute="bottom" constant="8" id="SAY-pE-bg6"/>
+                <constraint firstItem="RQs-96-Con" firstAttribute="top" secondItem="KU6-MB-4x2" secondAttribute="bottom" constant="10" id="SeA-pk-4jL"/>
+                <constraint firstItem="RQs-96-Con" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Psm-VB-Yyt" secondAttribute="trailing" constant="20" id="VGD-7i-zxb"/>
                 <constraint firstItem="bSI-qI-bke" firstAttribute="trailing" secondItem="KOl-NS-gR0" secondAttribute="trailing" id="Va2-fM-XR5"/>
                 <constraint firstItem="KOl-NS-gR0" firstAttribute="leading" secondItem="Psm-VB-Yyt" secondAttribute="leading" id="WAI-qv-7Si"/>
                 <constraint firstItem="bSI-qI-bke" firstAttribute="leading" secondItem="KOl-NS-gR0" secondAttribute="leading" id="Wxb-DK-Fst"/>
@@ -104,7 +117,9 @@
                 <constraint firstItem="hpV-m2-vZc" firstAttribute="leading" secondItem="bSI-qI-bke" secondAttribute="leading" id="hz1-vB-azG"/>
                 <constraint firstItem="Psm-VB-Yyt" firstAttribute="top" secondItem="KU6-MB-4x2" secondAttribute="bottom" constant="10" id="kRR-n7-UzJ"/>
                 <constraint firstItem="hpV-m2-vZc" firstAttribute="trailing" secondItem="bSI-qI-bke" secondAttribute="trailing" id="nyC-ic-6UH"/>
+                <constraint firstAttribute="trailing" secondItem="KOl-NS-gR0" secondAttribute="trailing" constant="20" id="oHd-0w-27d"/>
                 <constraint firstItem="hpV-m2-vZc" firstAttribute="height" secondItem="bSI-qI-bke" secondAttribute="height" id="rHF-7n-Sni"/>
+                <constraint firstAttribute="trailing" secondItem="RQs-96-Con" secondAttribute="trailing" constant="18" id="rj6-Rj-Asb"/>
                 <constraint firstItem="uca-5Y-CPe" firstAttribute="leading" secondItem="KOl-NS-gR0" secondAttribute="leading" id="vRh-h1-bWL"/>
             </constraints>
             <point key="canvasLocation" x="413" y="385"/>

@@ -31,6 +31,9 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 	//
     let defaults = NSUserDefaults.standardUserDefaults()
 
+	//
+	//	Set which XIB should be displayed
+	//
     override var nibName: String? {
         return "TodayViewController"
     }
@@ -92,6 +95,32 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         getData();
     }
 
+	//
+	//	() Button press event.
+	//
+	@IBAction func copy(sender: NSButton) {
+
+		//
+		//	1. Get the IP from the lable
+		//
+		let strIP = tfIP.stringValue;
+
+		//
+		//	2. Instanciate the Clip Board
+		//
+		let pasteboard = NSPasteboard.generalPasteboard()
+
+		//
+		//	3. Clean the clip board from previous data
+		//
+		pasteboard.clearContents();
+
+		//
+		//	4. Save the IP in to the clip board.
+		//
+		pasteboard.setString(strIP, forType: NSPasteboardTypeString)
+	}
+	
 	//
 	//	() that connects to the server
 	//
