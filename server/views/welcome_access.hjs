@@ -15,7 +15,9 @@
 	<li><strong>API_KEY</strong>: <mark>{{uuid}}</mark></li>
 </ul>
 
-<p>If you didn't read it already, visit the project page <a href="https://github.com/davidgatti/What-Is-My-IP">https://github.com/davidgatti/What-Is-My-IP</a> to find out whee to use this information.</p>
+<p>If you didn't read it already, visit the project page <a href="https://github.com/davidgatti/What-Is-My-IP">https://github.com/davidgatti/What-Is-My-IP</a> to find out where to use this information.</p>
+
+<p><strong>Crucial</strong>: this page display your API KEY which you should not share with anyone if you want to be the only one updating your IP. Thus this page will be only visible once. Afterwards it will be locked. But only temporarily. Every time the Heroku server will be restarted, anyone will be able to access this page. To fix this issue, visit the setting page page on Heroku, and change the Environment Variable VISITED to 1.</p>
 
 <p>Best regards,</p>
 
