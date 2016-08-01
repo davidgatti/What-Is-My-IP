@@ -3,8 +3,8 @@
 #include <openssl/err.h>
 #include <openssl/bio.h>
 
-#define APIKEY "YzUwYzQ3MzAzODdlZDJlYjUxMmZiYzk0NTc5ZjVlNTM1YzY3MjFjMjI5MDI5MDQzMzRlNDA1ODJkMmE1M2ExMQ=="
-#define HOST "wimi-test.herokuapp.com"
+#define APIKEY "YOUR_FANCY_KEY"
+#define HOST "YOUR_SERVER_URL"
 #define PORT "443"
 
 int main() {
