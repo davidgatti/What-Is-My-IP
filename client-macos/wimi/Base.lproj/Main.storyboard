@@ -87,9 +87,9 @@
                                 <rect key="frame" x="18" y="59" width="444" height="153"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="EbL-Rn-DGj">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Thank you for installing the Today Widget Client. To see your app, plese swip with two fingers on the trackpad from rigth to left, and click the "edit" button on the bottom of the today window.
+                                    <mutableString key="title">Thank you for installing the Today Widget Client. To see your app, please swipe with two fingers on the trackpad from right to left, and click the "Edit" button on the bottom of the today window.
 
-After addign the WiMi Widget, paste the API KEY and the server URL followd by a Enter key stroke.  After a moment you should get your IP if you installed the Server and Linux client first.</string>
+After adding the WiMi Widget, paste the API KEY and the server URL, followed by an Enter key stroke.  After a moment, you should get your IP, if you installed the Server and Linux client first.</mutableString>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
