@@ -1,5 +1,7 @@
 # WiMi: What Is My IP
 
+<div align="center"><img src="https://github.com/davidgatti/What-Is-My-IP/blob/master/header.png"></div>
+
 WiMi is a simple solution that allows you to constantly stay up to date with your ever-changing public IP. We all would like to have our own small server using a Raspberry Pi, but the problem is that our ISPs don’t allow us to have a fixed IP; or if they do, such an option is just too expensive for our hobby projects.
 
 A solution to this problem is to use a service that manages a domain name for us, and change the IP at which it points. This type of solution is typically paid. When it is free, it comes with some annoying limitations that are put in place to force you to upgrade to a premium account.
