@@ -1,4 +1,4 @@
-# WiMi: What Is My IP?
+# WiMi: What Is My IP
 
 WiMi is a simple solution that allows you to constantly stay up to date with your ever-changing public IP. We all would like to have our own small server using a Raspberry Pi, but the problem is that our ISPs don’t allow us to have a fixed IP; or if they do, such an option is just too expensive for our hobby projects.
 
