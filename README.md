@@ -46,6 +46,25 @@ I hope you’ll enjoy this project, and find it useful. If you have any question
 
 Right now, the project only has a MacOS client. If you know how to write a Windows or Linux app, feel free to submit a Pull Request with your work. One important thing, though - your code needs to be spotless (clean looking), with comments all over the place, and written with the intent to teach others.
 
-## My other Projects
+# Other
 
-If you like this project, please check out my other ones.
+If you've enjoyed this article/project, please consider giving it a 🌟. Also check out my [GitHub account] (https://github.com/davidgatti), where I have other articles and apps that you might find interesting.
+
+## Where to follow
+
+You can follow me on social media 🐙😇, at the following locations:
+
+- [GitHub](https://github.com/davidgatti)
+- [Twitter](https://twitter.com/dawidgatti)
+- [Instagram](https://www.instagram.com/gattidavid/)
+
+## More about me
+
+I don’t only live on GitHub, I try to do many things not to get bored 🙃. To learn more about me, you can visit the following links:
+
+- [Podcasts](http://david.gatti.pl/podcasts)
+- [Articles](http://david.gatti.pl/articles)
+- [Technical Articles](http://david.gatti.pl/technical_articles)
+- [Software Projects](http://david.gatti.pl/software_projects)
+- [Hardware Projects](http://david.gatti.pl/hardware_projects)
+
